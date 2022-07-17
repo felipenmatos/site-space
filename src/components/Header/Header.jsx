@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { NavLink as Link } from "react-router-dom";
 import iconPath from "../../assets/Header/iconPath.svg";
 
 const Header = () => {
@@ -8,22 +9,18 @@ const Header = () => {
       <Icon src={iconPath} />
       <Line />
       <ContainerHeader>
-        <Step>
-          <TextNumber>00</TextNumber>
-          <Text>HOME</Text>
-        </Step>
-        <Step>
-          <TextNumber>01</TextNumber>
-          <Text>DESTINATION</Text>
-        </Step>
-        <Step>
-          <TextNumber>02</TextNumber>
-          <Text>CREW</Text>
-        </Step>
-        <Step>
-          <TextNumber>03</TextNumber>
-          <Text>TECHNOLOGY</Text>
-        </Step>
+        <NavLink to="/" activeStyle>
+          00 HOME
+        </NavLink>
+        <NavLink to="/" activeStyle>
+          01 DESTINATION
+        </NavLink>
+        <NavLink to="/" activeStyle>
+          02 CREW
+        </NavLink>
+        <NavLink to="/" activeStyle>
+          03 TECHNOLOGY
+        </NavLink>
       </ContainerHeader>
     </Container>
   );
@@ -35,7 +32,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-top: 1%;
+  margin-top: 2%;
 `;
 
 const Icon = styled.img`
@@ -99,29 +96,21 @@ const ContainerHeader = styled.div`
   }
 `;
 
-const Step = styled.div`
+const NavLink = styled(Link)`
   display: flex;
   flex-direction: row;
   align-items: center;
   cursor: pointer;
-`;
-
-const TextNumber = styled.p`
   font-weight: 700;
   font-size: 16px;
   color: #ffffff;
   line-height: 19px;
   letter-spacing: 2.7px;
-`;
-
-const Text = styled.p`
-  margin-left: 11px;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  color: #ffffff;
-  line-height: 19px;
-  letter-spacing: 2.7px;
+  &.active {
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+  }
 `;
 
 export default Header;
