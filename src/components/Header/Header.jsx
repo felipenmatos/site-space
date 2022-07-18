@@ -12,7 +12,7 @@ const Header = () => {
         <NavLink to="/" activeStyle>
           00 HOME
         </NavLink>
-        <NavLink to="/" activeStyle>
+        <NavLink to="/Destination" activeStyle>
           01 DESTINATION
         </NavLink>
         <NavLink to="/" activeStyle>
@@ -106,6 +106,7 @@ const NavLink = styled(Link)`
   color: #ffffff;
   line-height: 19px;
   letter-spacing: 2.7px;
+  text-decoration: none;
   &.active {
     font-weight: bold;
     color: #fff;
