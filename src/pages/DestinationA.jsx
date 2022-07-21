@@ -3,6 +3,9 @@ import styled from "styled-components";
 import background from "../assets/Destination/background.jpg";
 import Header from "../components/Header/Header";
 import imgMoon from "../assets/Destination/image-moon.png";
+import imgMars from "../assets/Destination/image-mars.png";
+import imgEuropa from "../assets/Destination/image-europa.png";
+import imgTitan from "../assets/Destination/image-titan.png";
 
 const Destination = () => {
   const [moon, setMoon] = useState(true);
@@ -25,10 +28,46 @@ const Destination = () => {
             </ContainerPhoto>
             <ContainerStep>
               <RowButtons>
-                <Button>MOON</Button>
-                <Button>MARS</Button>
-                <Button>EUROPA</Button>
-                <Button>TITAN</Button>
+                <Button
+                  onClick={() => {
+                    setMoon(true);
+                    setMars(false);
+                    setEuropa(false);
+                    setTitan(false);
+                  }}
+                >
+                  MOON
+                </Button>
+                <Button
+                  onClick={() => {
+                    setMoon(false);
+                    setMars(true);
+                    setEuropa(false);
+                    setTitan(false);
+                  }}
+                >
+                  MARS
+                </Button>
+                <Button
+                  onClick={() => {
+                    setMoon(false);
+                    setMars(false);
+                    setEuropa(true);
+                    setTitan(false);
+                  }}
+                >
+                  EUROPA
+                </Button>
+                <Button
+                  onClick={() => {
+                    setMoon(false);
+                    setMars(false);
+                    setEuropa(false);
+                    setTitan(true);
+                  }}
+                >
+                  TITAN
+                </Button>
               </RowButtons>
               <TextPlanet>
                 <Title>MOON</Title>
@@ -55,7 +94,236 @@ const Destination = () => {
         ) : (
           <></>
         )}
-        ;
+        {mars ? (
+          <>
+            <ContainerPhoto>
+              <Row>
+                <TextNumber>01</TextNumber>
+                <Text>PICK YOUR DESTINATION</Text>
+              </Row>
+              <PhotoPlanet src={imgMars} />
+            </ContainerPhoto>
+            <ContainerStep>
+              <RowButtons>
+                <Button
+                  onClick={() => {
+                    setMoon(true);
+                    setMars(false);
+                    setEuropa(false);
+                    setTitan(false);
+                  }}
+                >
+                  MOON
+                </Button>
+                <Button
+                  onClick={() => {
+                    setMoon(false);
+                    setMars(true);
+                    setEuropa(false);
+                    setTitan(false);
+                  }}
+                >
+                  MARS
+                </Button>
+                <Button
+                  onClick={() => {
+                    setMoon(false);
+                    setMars(false);
+                    setEuropa(true);
+                    setTitan(false);
+                  }}
+                >
+                  EUROPA
+                </Button>
+                <Button
+                  onClick={() => {
+                    setMoon(false);
+                    setMars(false);
+                    setEuropa(false);
+                    setTitan(true);
+                  }}
+                >
+                  TITAN
+                </Button>
+              </RowButtons>
+              <TextPlanet>
+                <Title>MARS</Title>
+                <Subtitle>
+                  Don’t forget to pack your hiking boots. You’ll need them to
+                  tackle Olympus Mons, the tallest planetary mountain in our
+                  solar system. It’s two and a half times the size of Everest!
+                </Subtitle>
+                <Line />
+                <RowInformation>
+                  <Column>
+                    <TitleDistance>AVG. DISTANCE</TitleDistance>
+                    <NumberDistance>225 MIL. km</NumberDistance>
+                  </Column>
+                  <ColumnDistance>
+                    <TitleDistance>Est. travel time</TitleDistance>
+                    <NumberDistance>9 MONTHS</NumberDistance>
+                  </ColumnDistance>
+                </RowInformation>
+              </TextPlanet>
+            </ContainerStep>
+          </>
+        ) : (
+          <></>
+        )}
+        {europa ? (
+          <>
+            <ContainerPhoto>
+              <Row>
+                <TextNumber>01</TextNumber>
+                <Text>PICK YOUR DESTINATION</Text>
+              </Row>
+              <PhotoPlanet src={imgEuropa} />
+            </ContainerPhoto>
+            <ContainerStep>
+              <RowButtons>
+                <Button
+                  onClick={() => {
+                    setMoon(true);
+                    setMars(false);
+                    setEuropa(false);
+                    setTitan(false);
+                  }}
+                >
+                  MOON
+                </Button>
+                <Button
+                  onClick={() => {
+                    setMoon(false);
+                    setMars(true);
+                    setEuropa(false);
+                    setTitan(false);
+                  }}
+                >
+                  MARS
+                </Button>
+                <Button
+                  onClick={() => {
+                    setMoon(false);
+                    setMars(false);
+                    setEuropa(true);
+                    setTitan(false);
+                  }}
+                >
+                  EUROPA
+                </Button>
+                <Button
+                  onClick={() => {
+                    setMoon(false);
+                    setMars(false);
+                    setEuropa(false);
+                    setTitan(true);
+                  }}
+                >
+                  TITAN
+                </Button>
+              </RowButtons>
+              <TextPlanet>
+                <Title>EUROPA</Title>
+                <Subtitle>
+                  The smallest of the four Galilean moons orbiting Jupiter,
+                  Europa is a winter lover’s dream. With an icy surface, it’s
+                  perfect for a bit of ice skating, curling, hockey, or simple
+                  relaxation in your snug wintery cabin.
+                </Subtitle>
+                <Line />
+                <RowInformation>
+                  <Column>
+                    <TitleDistance>AVG. DISTANCE</TitleDistance>
+                    <NumberDistance>628 MIL. km</NumberDistance>
+                  </Column>
+                  <ColumnDistance>
+                    <TitleDistance>Est. travel time</TitleDistance>
+                    <NumberDistance>3 YEARS</NumberDistance>
+                  </ColumnDistance>
+                </RowInformation>
+              </TextPlanet>
+            </ContainerStep>
+          </>
+        ) : (
+          <></>
+        )}
+        {titan ? (
+          <>
+            <ContainerPhoto>
+              <Row>
+                <TextNumber>01</TextNumber>
+                <Text>PICK YOUR DESTINATION</Text>
+              </Row>
+              <PhotoPlanet src={imgTitan} />
+            </ContainerPhoto>
+            <ContainerStep>
+              <RowButtons>
+                <Button
+                  onClick={() => {
+                    setMoon(true);
+                    setMars(false);
+                    setEuropa(false);
+                    setTitan(false);
+                  }}
+                >
+                  MOON
+                </Button>
+                <Button
+                  onClick={() => {
+                    setMoon(false);
+                    setMars(true);
+                    setEuropa(false);
+                    setTitan(false);
+                  }}
+                >
+                  MARS
+                </Button>
+                <Button
+                  onClick={() => {
+                    setMoon(false);
+                    setMars(false);
+                    setEuropa(true);
+                    setTitan(false);
+                  }}
+                >
+                  EUROPA
+                </Button>
+                <Button
+                  onClick={() => {
+                    setMoon(false);
+                    setMars(false);
+                    setEuropa(false);
+                    setTitan(true);
+                  }}
+                >
+                  TITAN
+                </Button>
+              </RowButtons>
+              <TextPlanet>
+                <Title>TITAN</Title>
+                <Subtitle>
+                  The only moon known to have a dense atmosphere other than
+                  Earth, Titan is a home away from home (just a few hundred
+                  degrees colder!). As a bonus, you get striking views of the
+                  Rings of Saturn.
+                </Subtitle>
+                <Line />
+                <RowInformation>
+                  <Column>
+                    <TitleDistance>AVG. DISTANCE</TitleDistance>
+                    <NumberDistance>1.6 BIL. km</NumberDistance>
+                  </Column>
+                  <ColumnDistance>
+                    <TitleDistance>Est. travel time</TitleDistance>
+                    <NumberDistance>7 YEARS</NumberDistance>
+                  </ColumnDistance>
+                </RowInformation>
+              </TextPlanet>
+            </ContainerStep>
+          </>
+        ) : (
+          <></>
+        )}
       </Body>
     </Container>
   );
