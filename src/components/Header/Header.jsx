@@ -15,7 +15,7 @@ const Header = () => {
         <NavLink to="/Destination" activeStyle>
           01 DESTINATION
         </NavLink>
-        <NavLink to="/" activeStyle>
+        <NavLink to="/Crew" activeStyle>
           02 CREW
         </NavLink>
         <NavLink to="/" activeStyle>
