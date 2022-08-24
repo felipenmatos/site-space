@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Crew from "./pages/CrewA";
 import Destination from "./pages/DestinationA";
 import Home from "./pages/Home";
+import Technology from "./pages/Technology";
 
 function App() {
   return (
@@ -14,6 +15,9 @@ function App() {
       </Routes>
       <Routes>
         <Route path="/Crew" element={<Crew />} />
+      </Routes>
+      <Routes>
+        <Route path="/Technology" element={<Technology />} />
       </Routes>
     </Router>
   );
