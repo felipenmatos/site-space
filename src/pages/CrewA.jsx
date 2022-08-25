@@ -5,6 +5,7 @@ import Header from "../components/Header/Header";
 import imgDouglas from "../assets/Crew/image-douglas.png";
 import imgMark from "../assets/Crew/image-mark.png";
 import imgVictor from "../assets/Crew/image-victor.png";
+import imgAnousheh from "../assets/Crew/image-anousheh.png";
 
 const Crew = () => {
   const [commander, setCommander] = useState(true);
@@ -167,12 +168,13 @@ const Crew = () => {
                 <Title>MEET YOUR CREW</Title>
               </Row>
               <Column>
-                <TitleProfile>COMMANDER</TitleProfile>
-                <Name>Douglas Hurley</Name>
+                <TitleProfile>Flight Engineer</TitleProfile>
+                <Name>Anousheh Ansari</Name>
                 <Text>
-                  Douglas Gerald Hurley is an American engineer, former Marine
-                  Corps pilot and former NASA astronaut. He launched into space
-                  for the third time as commander of Crew Dragon Demo-2.
+                  Anousheh Ansari is an Iranian American engineer and co-founder
+                  of Prodea Systems. Ansari was the fourth self-funded space
+                  tourist, the first self-funded woman to fly to the ISS, and
+                  the first Iranian in space.
                 </Text>
                 <RowButtons>
                   <Button
@@ -203,7 +205,7 @@ const Crew = () => {
                 </RowButtons>
               </Column>
             </ContainerText>
-            <PhotoProfile src={imgDouglas} />
+            <PhotoProfileAnousheh src={imgAnousheh} />
           </Row>
         )}
       </Body>
@@ -223,18 +225,16 @@ const Container = styled.div`
 
 const Body = styled.div`
   width: 100%;
-  height: 100vh;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  margin-top: 5%;
 `;
 
 const ContainerText = styled.div`
   width: 382px;
   height: 100px;
-  margin-top: -50px;
+  margin-top: -55px;
   margin-left: -17%;
   display: flex;
   flex-direction: column;
@@ -262,6 +262,7 @@ const Row = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  margin-top: 4%;
 `;
 
 const Number = styled.p`
@@ -347,6 +348,7 @@ const Button = styled.button`
 
 const PhotoProfile = styled.img`
   width: 300px;
+  height: 400px;
 `;
 
 const PhotoProfileVictor = styled.img`
@@ -357,6 +359,12 @@ const PhotoProfileVictor = styled.img`
 
 const PhotoProfileMark = styled.img`
   width: 300px;
+  height: 400px;
+`;
+
+const PhotoProfileAnousheh = styled.img`
+  margin-left: -10px;
+  width: 310px;
   height: 400px;
 `;
 
